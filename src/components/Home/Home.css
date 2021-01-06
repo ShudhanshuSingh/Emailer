@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro&display=swap');
+
+/* rgba(21, 99, 214, 0.973) */
+.home{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-header{
+    font-size: 80px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+.header-desc{
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+.home-button{
+    padding: 15px 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: 800;
+    margin: 20px;
+    transition: background-color 0.2s ;
+}
+.home-button:hover{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}

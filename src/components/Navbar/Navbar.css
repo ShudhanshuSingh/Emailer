@@ -1,0 +1,53 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 60px;
+    border-bottom: 1px solid #DBDBDB;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.nav-logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    border-left: 1px solid #DBDBDB;
+    padding-left: 20px;
+    border-right: 1px solid #DBDBDB;
+    padding-right: 20px;
+}
+.nav-features{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    border-left: 1px solid #DBDBDB;
+    padding-left: 20px;
+    border-right: 1px solid #DBDBDB;
+    padding-right: 20px;
+}
+.nav-login{
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+.nav-signup{
+    border: 1px solid black;
+    padding: 10px 20px  ;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+.nav-login:hover{
+    cursor: pointer;
+}
+.nav-signup:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #DBDBDB;
+}

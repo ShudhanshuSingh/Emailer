@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import EditorJS from '@editorjs/editorjs';
+import React from 'react';
+import EditorJs from "react-editor-js";
+import { EDITOR_JS_TOOLS } from "./Constants";
+import Output from 'editorjs-react-renderer';
+import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+
 
 function App() {
+  // const [data,setData] = React.useState()
+  // const ref = React.useRef(null) 
+  // async function handlesave(){
+  //   const savedData = await ref.current.save()
+  //   console.log(savedData)
+  //   setData(savedData);
+  // }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Home />
+
+      {/* <EditorJs
+        tools={EDITOR_JS_TOOLS}
+        instanceRef={(instance)=>(ref.current = instance)}
+      />
+      <button onClick={handlesave}>save</button>
+      {
+        data==null?(<h3>No data</h3>):(
+            <Output data={data} />
+        )
+      } */}
     </div>
   );
 }

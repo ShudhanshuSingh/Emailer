@@ -1,37 +1,48 @@
 import "./App.css";
 // import EditorJS from '@editorjs/editorjs';
-import React from 'react';
-import EditorJs from "react-editor-js";
-import { EDITOR_JS_TOOLS } from "./Constants";
-import Output from 'editorjs-react-renderer';
+import React from "react";
+import Output from "editorjs-react-renderer";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import CreateMail from "./components/CreateMail/CreateMail";
+import SendMail from "./components/SendMail/SendMail";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 
 function App() {
   // const [data,setData] = React.useState()
-  // const ref = React.useRef(null) 
-  // async function handlesave(){
-  //   const savedData = await ref.current.save()
-  //   console.log(savedData)
+  //
+  
   //   setData(savedData);
   // }
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/send">
+            <Navbar />
+            <SendMail />
+          </Route>
+          <Route path="/create-mail">
+            <Navbar />
+            <CreateMail />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Navbar />
+            <Home />
+          </Route>
+        </Switch>
 
-      {/* <EditorJs
-        tools={EDITOR_JS_TOOLS}
-        instanceRef={(instance)=>(ref.current = instance)}
-      />
-      <button onClick={handlesave}>save</button>
-      {
-        data==null?(<h3>No data</h3>):(
-            <Output data={data} />
-        )
-      } */}
-    </div>
+         
+      </div>
+    </Router>
   );
 }
 

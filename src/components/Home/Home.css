@@ -27,7 +27,6 @@
 .home-button{
     padding: 15px 20px;
     border: 1px solid #dbdbdb;
-    border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: large;
     font-weight: 800;
@@ -40,4 +39,14 @@
     color: white;
     cursor: pointer;
     font-weight: 600;
+}
+@media only screen and (max-width: 600px) {
+    .home{
+        width: 100vw;
+        height: 100vh;
+
+    }
+    .header-desc{
+        padding-left: 10px;
+    }
 }

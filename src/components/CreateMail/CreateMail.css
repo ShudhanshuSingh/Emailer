@@ -1,0 +1,33 @@
+.create-mail{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif; 
+    
+}
+.save-button{
+    border: 1px solid #dfdfdf;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: large;
+    margin: 10px;
+    font-weight: 400;
+    transition: background-color .2s;
+}
+.save-button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+.editor{
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex: 1;
+    }
+  }
+  

@@ -20,7 +20,7 @@ function SendMail() {
         <div className="send-mail">
             <h3>Hello Hello, You are just one step away!!</h3>
             <input id="file-upload" onClick={uploadHandler} className="file-upload" type="file" accept=".xls,.xlsx" />
-            <label for="file-upload" class="file-upload">
+            <label for="file-upload" className="file-upload">
                  Upload xlsx
             </label>
         </div>

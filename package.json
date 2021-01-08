@@ -23,6 +23,7 @@
     "@testing-library/user-event": "^12.6.0",
     "convert-excel-to-json": "^1.7.0",
     "editorjs-react-renderer": "^2.5.0",
+    "firebase": "^8.2.2",
     "re-resizable": "^6.9.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

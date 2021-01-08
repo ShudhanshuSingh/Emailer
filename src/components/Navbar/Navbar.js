@@ -1,7 +1,11 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-function Navbar() {
+import { auth } from "../../firebase";
+function Navbar({ email }) {
+  const signOut = () =>{
+    auth.signOut();
+  }
   return (
     <div className="navbar">
       <div className="nav-logo">
@@ -9,14 +13,24 @@ function Navbar() {
           <h3 className="app-logo">Emailer</h3>
         </Link>
       </div>
-      <div className="nav-features">
-        <Link to="/login">
-          <button className="nav-login">Login</button>
-        </Link>
-        <Link to="/signup">
-          <button className="nav-signup">Sign up</button>
-        </Link>
-      </div>
+      {
+        email?(
+          <div className="nav-features">
+            <h3 className="email">{email}</h3>
+            <button className="nav-signup" onClick={signOut}>Sign Out</button>
+          </div>
+        ):(
+        <div className="nav-features">
+          <Link to="/login">
+            <button className="nav-login">Login</button>
+          </Link>
+          <Link to="/signup">
+            <button className="nav-signup">Sign up</button>
+          </Link>
+        </div>
+        )
+      }
+      
     </div>
   );
 }

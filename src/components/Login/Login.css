@@ -65,7 +65,26 @@
 .input:focus{
     border: 2px solid black;
 }
-
+.different-methods{
+    display: flex;
+}
+.login-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google-logo{
+    width: 20px;
+    object-fit: contain;
+    align-items: center;
+    margin:0px 5px ;
+}
+.facebook-logo{
+    width: 25px;
+    object-fit: contain;
+    align-items: center;
+    margin:0px 5px ;
+}
 @media only screen and (max-width: 600px) {
     .login{
         width:100vw;

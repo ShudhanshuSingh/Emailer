@@ -34,6 +34,9 @@ a{
     color: inherit;
     text-decoration: none;
 }
+.email{
+    margin: 0px 5px;
+}
 .nav-login{
     border: none;
     background-color: transparent;

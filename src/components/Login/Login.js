@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from "./Rangitikei.svg";
+import Image from "./loginimage.svg";
 import "./Login.css";
 import { auth, provider, facebookProvider } from "../../firebase";
 
@@ -59,9 +59,11 @@ function Login() {
             <button className="login-button login-social" disabled={true} onClick={signInFacebook}><img className="facebook-logo" src="https://img.icons8.com/fluent/48/000000/facebook-new.png"/>Log In</button>
         </div>
       </div>
-      <div className="login-design">
-        <img src={Image} alt="design" />
-      </div>
+
+      
+      <img className="login-design" src={Image} alt="design" />
+
+      
     </div>
   );
 }

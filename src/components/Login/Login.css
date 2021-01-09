@@ -30,10 +30,9 @@
 }
 /* Image hidden for a while */
 .login-design{
-    display: none;
-}
-.login-design > img{
-    height: 99.3vh;
+   width: 300px; 
+   object-fit: contain;
+
 }
 
 .input{

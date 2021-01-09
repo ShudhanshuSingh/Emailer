@@ -3,11 +3,11 @@ import "./CreateMail.css";
 import { Resizable } from "re-resizable";
 import EditorJs from "react-editor-js";
 import { EDITOR_JS_TOOLS } from "./Constants";
-import { useHistory } from "react-router-dom";
-
+import { useHistory, useParams } from "react-router-dom";
 
 
 function CreateMail() {
+  let {docId} = useParams();
   let history = useHistory();
   const ref = React.useRef(null)
   async function handlesave(){

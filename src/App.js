@@ -42,7 +42,7 @@ function App() {
             <SendMail />
           </Route>
 
-          <Route path="/create-mail">
+          <Route path="/:docId">
             {user != null ? <Navbar email={user.email} /> : <Navbar />}
 
             <CreateMail />

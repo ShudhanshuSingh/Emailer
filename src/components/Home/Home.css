@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    overflow-y: hidden;
 }
 
 .home-header{
@@ -40,6 +40,15 @@
     cursor: pointer;
     font-weight: 600;
 }
+.image{
+    position: absolute;
+    z-index: -1;
+    width: 600px;
+    top: 70px;
+    left: 30px;  
+    object-fit: contain;
+    transform: rotate(-15deg);
+}
 @media only screen and (max-width: 600px) {
     .home{
         width: 100vw;
@@ -48,5 +57,9 @@
     }
     .header-desc{
         padding-left: 10px;
+    }
+    .image{
+        display: none;
+        
     }
 }

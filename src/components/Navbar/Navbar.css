@@ -19,6 +19,7 @@
     padding-left: 20px;
     border-right: 1px solid #DBDBDB;
     padding-right: 20px;
+    text-align: center;
 }
 .nav-features{
     display: flex;
@@ -59,4 +60,8 @@ a{
     cursor: pointer;
     background-color: black;
     color: #DBDBDB;
+}
+
+.logo{
+    width: 40px;
 }

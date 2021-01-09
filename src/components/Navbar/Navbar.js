@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
+import Logo from "./appLogo.png"
 function Navbar({ email }) {
   const signOut = () =>{
     auth.signOut();
@@ -10,7 +11,8 @@ function Navbar({ email }) {
     <div className="navbar">
       <div className="nav-logo">
         <Link to="/">
-          <h3 className="app-logo">Emailer</h3>
+          
+          <h3 className="app-logo"><img className="logo" src={Logo} />Emailer</h3>
         </Link>
       </div>
       {

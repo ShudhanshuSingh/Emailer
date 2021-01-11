@@ -3,8 +3,12 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
 import Logo from "./appLogo.png"
+import { useDispatch } from "react-redux";
+import { logout } from "../../features/userSlice";
 function Navbar({ email }) {
+  const dispatch =useDispatch();
   const signOut = () =>{
+    dispatch(logout());
     auth.signOut();
   }
   return (

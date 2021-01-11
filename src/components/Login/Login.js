@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import Image from "./loginimage.svg";
 import "./Login.css";
 import { auth, provider, facebookProvider } from "../../firebase";
+import { useDispatch } from "react-redux";
+import { login } from "../../features/userSlice";
 
 function Login() {
-  const [signinEmail, setSignInEmail] = React.useState();
-  const [signinPassword, setSignInPassword] = React.useState();
+  const [signinEmail, setSignInEmail] = React.useState('');
+  const [signinPassword, setSignInPassword] = React.useState('');
   const [signinUser, setSignInUser] = React.useState();
-
+  const dispatch = useDispatch();
   const signInProvider = () => {
     auth
       .signInWithPopup(provider)
@@ -26,6 +28,12 @@ function Login() {
     auth
       .signInWithEmailAndPassword(signinEmail, signinPassword)
       .then((result) => setSignInUser(result))
+      .then((userAuth)=>{
+        dispatch(login({
+          email:userAuth.email,
+          uid:userAuth.uid
+        }))
+      })
       .catch((err) => alert(err.message));
      
       setSignInEmail('');
